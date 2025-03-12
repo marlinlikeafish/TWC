@@ -1,0 +1,376 @@
+body {
+    font-family: "Roboto", helvetica, sans-serif;
+}
+
+h1{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 500;
+    color: #f9f9f9;
+}
+
+h2{
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+h3{
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+h4{
+    margin: 0;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+#landing h3{
+    text-align: left;
+    font-style: italic;
+    font-weight: 200;
+    display: inline-flex;
+    color: #f9f9f9;
+}
+
+#landing{
+    margin: 0;
+    width: 100%;
+}
+
+#landing-1-text{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between; 
+    border: none;
+    border-color: #000033;
+    border-radius: .5rem;
+    background-color: #000033;
+    height: 2.5rem;
+    align-items: center;
+}
+
+#landing-1{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #003366;
+}
+
+#landing-2{
+    height: 5rem;
+    background-color: #003366;
+    width: 100%;
+}
+
+#landing-3{
+    height: 10rem;
+    width: 100%;
+    background-color: azure;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#landing-3-text{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#free-window{
+    border: solid;
+    border-radius: .5rem;
+    display: inline-flex;
+    padding: .2rem .2rem;
+    font-weight: 325;
+    background-color: #000099;
+    color: #d3d3d3;
+    border-color: #000099;
+    justify-content: center;
+    align-items: center;
+}
+
+#free-gutter{
+    display: inline-flex;
+    border: solid;
+    padding: .2rem .2rem;
+    font-weight: 325;
+    background-color: #000099;
+    border-radius: .5rem;
+    color: #d3d3d3;
+    border-color: #000099;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+#view-contact{
+    background-color: #ffff99;
+    font-size: 1rem;
+    border: solid;
+    border-radius: .5rem;
+    border-width: .15rem;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+    transition-delay: 0ms;
+}
+
+main{
+    max-width: 1500px;
+    margin: auto;
+    box-shadow: 30PX 0px 40px rgba(0, 0, 0, .1),
+    -30px 0px 40px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.service-item img{
+    display: block;
+    width: 50%;
+}
+
+button{
+    display: flexbox;
+    background-color: #ffff99;
+    border: solid;
+    border-radius: .5rem;
+    border-width: .15rem;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+    transition-delay: 0ms;
+}
+
+button:hover{
+    background-color: #ffff66;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.caption{
+    width: 50%;
+    text-align: center;
+}
+
+.service-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: solid;
+    border-color: #a9a9a9;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    background-color: #d3d3d3;
+}
+
+#images{
+    background-color: none;
+}
+
+footer{
+   background-color: azure;
+}
+
+#footer-1{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    height: 10rem;
+}
+
+#veteran{
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+#flag{
+    width: 12rem;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-2{
+    background-color: #003366;
+    height: 5rem;
+    color: #f9f9f9;
+}
+
+#footer-2-text{
+    display: inline-flex;
+    color: #f9f9f9;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#contact{
+    padding-right: .5%;
+    font-family: "roboto";
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#email{
+    padding-left: .5%;
+    font-family: "roboto", helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#footer-3{
+    height: 2.5rem;
+    width: 100%;
+    background-color: #000033;
+}
+
+
+/* General Mobile Optimizations */
+@media screen and (max-width: 768px) {
+    /* Reduce padding and margins */
+    body {
+        font-size: 0.875rem; /* 14px equivalent */
+        line-height: 1.4;
+    }
+    #landing-1{
+        height: 1.75rem;
+    }
+
+    #landing-2{
+        height: 3.5rem;
+    }
+
+    #landing-3{
+        height: 7rem;
+    }
+    /* Landing Section */
+    #landing-1 h1 {
+        font-size: 1rem; /* 24px */
+    }
+
+    #landing-1 h3 {
+        font-size: .75rem; /* 16px */
+    }
+
+    #landing-1 button {
+        font-size: 0.875rem; /* 14px */
+        width: auto;
+        height: auto;
+        border: solid;
+        border-radius: .5rem;
+        border-width: .15rem;
+        height: 1.25rem;
+        width: 4rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Service Items (Make Images Smaller & Stack) */
+    .service-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .service-item img {
+        width: 50%;
+        max-width: 18.75rem; /* 300px */
+        height: auto;
+    }
+
+    .caption {
+        padding: 0.625rem; /* 10px */
+    }
+
+    .caption h3 {
+        font-size: 1rem; /* 16px */
+    }
+
+    .caption h4 {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .caption button {
+        width: 100%;
+        max-width: 11.25rem; /* 180px */
+        font-size: 0.875rem; /* 14px */
+        padding: 0.5rem; /* 8px */
+    }
+
+    /* Landing Section Spacing */
+    #landing-3-text h2 {
+        font-size: 1rem; /* 16px */
+        padding: 0.625rem; /* 10px */
+    }
+
+    /* Footer Adjustments */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-1{
+        height: 7rem;
+    }
+
+    #veteran{
+        font-size: 1rem;
+    }
+
+    #footer-2{
+        height: 3.5rem;
+    }
+
+    #footer-3{
+        height: 1.75rem;
+    }
+
+    #footer-1, #footer-2 {
+        width: 100%;
+        /* 10px */
+    }
+
+    #footer-1 img {
+        width: 5rem; /* 80px */
+        height: auto;
+    }
+
+    /* Reduce Button Sizes */
+    button {
+        font-size: 0.875rem; /* 14px */
+        padding: 0.625rem 1rem; /* 10px 16px */
+    }
+
+    /* Make Contact Info Larger */
+    #contact {
+        font-size: 1.125rem; /* 18px */
+        padding-right: .5rem;
+    }
+
+    #email {
+        font-size: 1rem; /* 16px */
+        padding-left: .5rem;
+    }
+
+    /* Improve Clickability */
+    a, button {
+        touch-action: manipulation;
+    }
+}

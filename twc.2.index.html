@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./resources/css/twc.2.css">
+
+    <title>The Window Co.</title>
+</head>
+<body>
+   
+    <div id="landing">
+        <div id="landing-1">
+            <div id="landing-1-text">
+                <h1>The Window Company</h1>
+                <h3>Serving the DFW area</h3>
+                <button id="view-contact">Contact</button>
+                <script>
+                    document.getElementById("view-contact").addEventListener("click", function() {
+                      document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+                    });
+                  </script>
+            </div>
+        </div>
+
+        <div id="landing-2">
+            <div id="landing-2-text"></div>
+        </div>
+
+        <div id="landing-3">
+            <div id="landing-3-text">
+                <!-- <h2 id="free-window">First Window Wash FREE</h2> -->
+                <h2 id="free-gutter">FREE gutter service with any window or pressure wash</h2>
+            </div>
+        </div>
+        
+    </div>
+
+    <main>
+
+        <div id="images">
+
+            <div class="service-item">
+                <img src="./resources/images/window.dude.png" alt="professional window washing">
+                <div class="caption">
+                    <h3>Residential or Commercial Window Washing</h3>
+                    <h4>All services include interior, exterior, and screens.</h4>
+                    <button id="get-quote-windows">Get Pricing</button>
+                    <script>
+                        document.getElementById("get-quote-windows").addEventListener("click", function() {
+                          document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+                        });
+                      </script>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <img src="./resources/images/pressure.washing.jpg" alt="pressure washing">
+                <div class="caption">
+                    <h3>Pressure Washing</h3>
+                    <h4>Driveway, sidewalk, storefront, home, and deck.</h4>
+                    <button id="get-quote-pressure-washing">Get Pricing</button>
+                    <script>
+                        document.getElementById("get-quote-pressure-washing").addEventListener("click", function() {
+                          document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+                        });
+                      </script>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <img src="./resources/images/gutter.cleanig.jpg" alt="gutter cleaning">
+                <div class="caption">
+                    <h3>Gutter Servicing</h3>
+                    <h4>Leaves, debris, polish, and repair.</h4>
+                    <button id="get-quote-gutters">Get Pricing</button>
+                    <script>
+                        document.getElementById("get-quote-gutters").addEventListener("click", function() {
+                          document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+                        });
+                      </script>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+        
+    <footer>
+
+        <div id="footer-1">
+            <div id="footer-1-text">
+                <p id="veteran">Proudly Veteran Owned and Operated</p>
+            </div>
+            <div class="footer-flag">
+                <img id="flag"  src="./resources/images/flag.webp" alt="veteran owned business">
+            </div>
+        </div>
+
+        <div id="footer-2">
+            <div id="footer-2-text">
+                <p id="contact">832-444-1630</p>
+                <p id="email">contact@thewindow-co.com</p>
+            </div>
+        </div>
+
+        <div id="footer-3"></div>
+        
+    </footer>
+        
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    
+        <script src="./js/main.js"></script>
+
+</body>
+</html>
