@@ -222,6 +222,7 @@ footer{
     font-family: "roboto";
     font-size: 1rem;
     font-weight: bolder;
+    color: #f9f9f9;
 }
 
 #email{
@@ -229,6 +230,7 @@ footer{
     font-family: "roboto", helvetica, sans-serif;
     font-size: 1rem;
     font-weight: bolder;
+    color: #f9f9f9;
 }
 
 #footer-3{
