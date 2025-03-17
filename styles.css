@@ -315,7 +315,7 @@ footer{
 
     .caption button {
         width: 100%;
-        max-width: 11.25rem; /* 180px */
+        max-width: 9rem; /* 180px */
         font-size: 0.875rem; /* 14px */
         padding: 0.5rem; /* 8px */
     }
