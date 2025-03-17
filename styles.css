@@ -150,6 +150,7 @@ button{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
     transition-delay: 0ms;
     color: black;
+    font-weight: bold;
 }
 
 button:hover{
@@ -280,6 +281,7 @@ footer{
         width: 4rem;
         margin: 0;
         padding: 0;
+        font-weight: bold;
     }
 
     /* Service Items (Make Images Smaller & Stack) */
@@ -294,7 +296,7 @@ footer{
     .service-item img {
         width: 50%;
         max-width: 18.75rem; /* 300px */
-        height: auto;
+        height: 100%;
     }
 
     .caption {
