@@ -143,6 +143,7 @@ button{
     border: solid;
     border-radius: .5rem;
     border-width: .15rem;
+    border-color:  #ffff99;
     margin: 1rem;
     width: auto;
     height: auto;
