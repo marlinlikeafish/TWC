@@ -237,6 +237,12 @@ footer{
     color: #f9f9f9;
 }
 
+#email a {
+    color: #f9f9f9 !important; 
+    text-decoration: none !important; 
+    font-weight: bolder;
+}
+
 #footer-3{
     height: 2.5rem;
     width: 100%;
