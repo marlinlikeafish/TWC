@@ -70,7 +70,7 @@ h4{
 #landing-3{
     height: 10rem;
     width: 100%;
-    background-color: azure;
+    background-color: #E5FAFF;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -181,7 +181,7 @@ button:hover{
 }
 
 footer{
-   background-color: azure;
+   background-color: #E5FAFF;
 }
 
 #footer-1{
