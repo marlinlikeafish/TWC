@@ -287,7 +287,8 @@ footer{
     }
 
     #landing-1 h3 {
-        font-size: .75rem; /* 16px */
+        font-size: 1.75rem;
+        font-weight: 400;/* 16px */
     }
 
     #landing-1 button {
