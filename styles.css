@@ -267,9 +267,13 @@ footer{
         line-height: 1.4;
     }
     #landing-1{
-        height: 5.25rem;
+        height: 5rem;
     }
 
+    #landing-img{
+    height: 5rem;
+    }
+    
     #landing-2{
         height: 0rem;
     }
