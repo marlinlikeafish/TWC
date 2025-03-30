@@ -33,7 +33,7 @@ h4{
 #landing h3{
     text-align: left;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 400;
     display: inline-flex;
     color: #f9f9f9;
 }
@@ -41,6 +41,10 @@ h4{
 #landing{
     margin: 0;
     width: 100%;
+}
+
+#landing-img{
+    height: 5rem;
 }
 
 #landing-1-text{
@@ -51,18 +55,18 @@ h4{
     border-color: #000033;
     border-radius: .5rem;
     background-color: #000033;
-    height: 2.5rem;
+    height: 4rem;
     align-items: center;
 }
 
 #landing-1{
     width: 100%;
-    height: 2.5rem;
+    height: 4rem;
     background-color: #003366;
 }
 
 #landing-2{
-    height: 5rem;
+    height: 0rem;
     background-color: #003366;
     width: 100%;
 }
@@ -263,11 +267,11 @@ footer{
         line-height: 1.4;
     }
     #landing-1{
-        height: 1.75rem;
+        height: 5.25rem;
     }
 
     #landing-2{
-        height: 3.5rem;
+        height: 0rem;
     }
 
     #landing-3{
