@@ -3,7 +3,7 @@ body {
 }
 
 .hidden{
-    display: none !important;
+    display: none;
 }
 
 h1{
@@ -271,7 +271,6 @@ footer{
         line-height: 1.4;
     }
     #landing-1{
-        
         height: 4rem;
     }
 
@@ -410,18 +409,4 @@ footer{
     /* Improve Clickability */
     a, button {
         touch-action: manipulation;
-    }
-
-    .service-item input,
-    .service-item textarea {
-      display: block;
-      width: 100%;
-      margin: 8px 0;
-      padding: 8px;
-    }
-    
-    .service-item form {
-      margin-top: 10px;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
     }

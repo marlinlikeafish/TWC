@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hidden Test</title>
+  <style>
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="show-btn">Get Pricing</button>
+
+  <div id="pricing-tool" class="hidden">
+    <label>Stories:</label>
+    <input type="number" placeholder="e.g. 2">
+    <label>Square Feet:</label>
+    <input type="number" placeholder="e.g. 1800">
+    <button>Calculate</button>
+  </div>
+
+  <script>
+    document.getElementById("show-btn").addEventListener("click", function () {
+      document.getElementById("pricing-tool").classList.remove("hidden");
+      this.classList.add("hidden");
+    });
+  </script>
+
+</body>
+</html>

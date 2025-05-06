@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Window Washing - Street Smarts</title>
+
+  <link rel="stylesheet" href="window-washing.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-bar">
+    <img src="./resources/images/StreetSmarts.logo.png" alt="Street Smarts Logo" class="logo" />
+    <h2>Window Washing</h2>
+  </header>
+
+  <main class="service-page">
+
+    <!--  Scrollable Image Gallery -->
+    <section class="gallery">
+      <img src="./resources/images/window.dude.png" alt="Window Cleaning 1" />
+    </section>
+
+    <!-- Pricing & Service Form -->
+    <section class="tools">
+      <div class="pricing-tool">
+        <h3>Get an Estimate</h3>
+
+        <label for="stories">Stories:</label>
+        <input type="number" id="stories" placeholder="e.g. 1 or 2" />
+
+        <label for="sqft">Square Footage:</label>
+        <input type="number" id="sqft" placeholder="e.g. 2000" />
+
+        <button onclick="calculatePrice()">Calculate Price</button>
+        <p id="price-result"></p>
+      </div>
+
+      <div class="service-request">
+        <h3>Request Service</h3>
+        <form action="mailto:contact@streetsmarts.us" method="POST" enctype="text/plain">
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input type="text" name="Address" placeholder="Service Address" required />
+          <input type="text" name="Phone" placeholder="Phone Number" required />
+          <input type="text" name="Preferred Date" placeholder="Preferred Service Date" />
+          <textarea name="Details" placeholder="Additional Details..."></textarea>
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function calculatePrice() {
+      const sqft = parseFloat(document.getElementById("sqft").value);
+      const stories = parseInt(document.getElementById("stories").value);
+
+      if (isNaN(sqft) || isNaN(stories)) {
+        alert("Please enter valid numbers.");
+        return;
+      }
+
+      const baseRate = 0.1;
+      const multiplier = stories > 1 ? 1.2 : 1;
+      const price = (sqft * baseRate * multiplier).toFixed(2);
+
+      document.getElementById("price-result").innerText = `Estimated Price: $${price}`;
+    }
+  </script>
+</body>
+</html>
