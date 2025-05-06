@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pressure Washing - Street Smarts</title>
+
+  <link rel="stylesheet" href="pressure-washing.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-bar">
+    <img src="./resources/images/StreetSmarts.logo.png" alt="Street Smarts Logo" class="logo" />
+    <h2>Pressure Washing</h2>
+  </header>
+
+  <main class="service-page">
+
+    <!-- Scrollable Image Gallery -->
+    <section class="gallery">
+      <img src="./resources/images/pressure.washing.jpg" alt="Pressure Washing" />
+    </section>
+
+    <!-- Pricing & Service Form -->
+    <section class="tools">
+      <div class="pricing-tool">
+        <h3>Get an Estimate</h3>
+
+        <label for="sqft">Square Footage:</label>
+        <input type="number" id="sqft" placeholder="e.g. 400" />
+
+        <button onclick="calculatePrice()">Calculate Price</button>
+        <p id="price-result"></p>
+      </div>
+
+      <div class="service-request">
+        <h3>Request Service</h3>
+        <form action="mailto:contact@streetsmarts.us" method="POST" enctype="multipart/form-data">
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input type="text" name="Address" placeholder="Service Address" required />
+          <input type="text" name="Phone" placeholder="Phone Number" required />
+          <input type="email" name="Email" placeholder="Email Address" required />
+          <input type="text" name="Preferred Date" placeholder="Preferred Service Date" />
+          <textarea name="Details" placeholder="Additional Details..."></textarea>
+          <label for="media">Upload Images/Videos:</label>
+          <input type="file" name="media" accept="image/*,video/*" multiple />
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function calculatePrice() {
+      const sqft = parseFloat(document.getElementById("sqft").value);
+
+      if (isNaN(sqft) || sqft <= 0) {
+        alert("Please enter a valid square footage.");
+        return;
+      }
+
+      const baseRate = 0.5;
+      const rawPrice = sqft * baseRate;
+      const finalPrice = rawPrice < 100 ? 100 : rawPrice;
+
+      document.getElementById("price-result").innerText = `Estimated Price: $${finalPrice.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
