@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #000033;
+    padding: 1rem;
+  }
+  
+  /* Header */
+  .header-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid #84D1E6;
+  }
+  
+  .logo {
+    height: 3rem;
+  }
+  
+  /* Gallery Section */
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .gallery img {
+    height: 12rem;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    object-fit: cover;
+  }
+  
+  /* Tools Section (Pricing + Form) */
+  .tools {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+  
+  /* Pricing Tool & Service Request Titles */
+  .pricing-tool h3,
+  .service-request h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #003366;
+  }
+  
+  /* Inputs & Textareas */
+  .pricing-tool input,
+  .service-request input,
+  .service-request textarea,
+  .service-request select,
+  .service-request input[type="file"] {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #ffff99;
+    color: #000033;
+    font-weight: bold;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #ffff66;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  /* Output Result Style */
+  #gutter-price-output,
+  #price-result {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #003366;
+  }
+  
+  /* Responsive Layout for Tablets & Desktops */
+  @media screen and (min-width: 768px) {
+    .service-page {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+  
+    .gallery {
+      width: 50%;
+      flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: auto;
+    }
+  
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .tools {
+      width: 50%;
+      padding-right: 1rem;
+    }
+  }
+  

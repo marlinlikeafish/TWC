@@ -10,7 +10,9 @@
 </head>
 <body>
   <header class="header-bar">
-    <img src="./resources/images/StreetSmarts.logo.png" alt="Street Smarts Logo" class="logo" />
+    <a href="index.html">
+      <img src="./resources/images/StreetSmarts.logo.png" alt="Street Smarts Logo" class="logo" />
+    </a>
     <h2>Window Washing</h2>
   </header>
 
@@ -44,6 +46,8 @@
           <input type="text" name="Phone" placeholder="Phone Number" required />
           <input type="text" name="Preferred Date" placeholder="Preferred Service Date" />
           <textarea name="Details" placeholder="Additional Details..."></textarea>
+          <label for="media">Upload Images/Videos:</label>
+          <input type="file" name="media" accept="image/*,video/*" multiple />
           <button type="submit">Submit Request</button>
         </form>
       </div>
