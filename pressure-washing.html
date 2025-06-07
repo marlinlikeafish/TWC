@@ -29,8 +29,8 @@
       <div class="pricing-tool">
         <h3>Get an Estimate</h3>
 
-      <label for="surface">Surface Angle:</label>
-      <select id="surface">
+      <label for="surface-angle">Surface Angle:</label>
+      <select id="surface-angle">
         <option value="horizontal">Horizontal (e.g., driveway)</option>
         <option value="vertical">Vertical (e.g., walls, siding)</option>
       </select>
@@ -61,6 +61,12 @@
           <textarea name="Details" placeholder="Additional Details..."></textarea>
           <label for="media">Upload Images/Videos:</label>
           <input type="file" name="media" accept="image/*,video/*" multiple />
+          <!-- testing hidden fields-->
+           <input type="hidden" name="Estimated Price"  id="hidden-price">
+           <input type="hidden" name="Surface Materail" id="hidden-material">
+           <input type="hidden" name="Surface Angle" id="hidden-angle">
+           <input type="hidden" name="Square Footage" id="hidden-sqft">
+
           <button type="submit">Submit Request</button>
         </form>
       </div>
@@ -70,24 +76,25 @@
 <script>
   function calculatePrice() {
     const sqft = parseFloat(document.getElementById("sqft").value);
-    const surface = document.getElementById("surface").value;
+    const angle = document.getElementById("surface-angle").value;
+    const material = document.getElementById("material").value;
 
     if (isNaN(sqft) || sqft <= 0) {
       alert("Please enter a valid square footage.");
       return;
     }
 
-    let rate;
-    if (surface === "vertical") {
-      rate = 0.20;
-    } else {
-      rate = 0.30;
-    }
-
+    let rate = angle === "vertical" ? 0.20 : 0.30;
     const rawPrice = sqft * rate;
     const finalPrice = rawPrice < 100 ? 100 : rawPrice;
 
     document.getElementById("price-result").innerText = `Estimated Price: $${finalPrice.toFixed(2)}`;
+
+    // Populate hidden fields
+    document.getElementById("hidden-price").value = `$${finalPrice.toFixed(2)}`;
+    document.getElementById("hidden-material").value = material;
+    document.getElementById("hidden-angle").value = angle.charAt(0).toUpperCase() + angle.slice(1);
+    document.getElementById("hidden-sqft").value = sqft;
   }
 </script>
 </body>
