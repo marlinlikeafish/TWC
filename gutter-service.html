@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gutter Servicing - Street Smarts</title>
-  
+
   <link rel="shortcut icon" type="streetsmarts-icon" href="./resources/images/StreetSmarts.logo.png">
   <link rel="stylesheet" href="gutter-service.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -41,16 +41,19 @@
 
       <div class="service-request">
         <h3>Request Service</h3>
-        <form action="mailto:contact@streetsmarts.us" method="POST" enctype="multipart/form-data">
+        <form action="mailto:contact@streetsmarts.us" method="POST" enctype="text/plain">
           <input type="text" name="Name" placeholder="Your Name" required />
           <input type="text" name="Address" placeholder="Service Address" required />
           <input type="text" name="Phone" placeholder="Phone Number" required />
           <input type="email" name="Email" placeholder="Email Address" required />
           <input type="text" name="Preferred Date" placeholder="Preferred Service Date" />
           <textarea name="Details" placeholder="Additional Details..."></textarea>
-          <label for="media">Upload Images/Videos:</label>
-          <input type="file" name="media" accept="image/*,video/*" multiple />
           <button type="submit">Submit Request</button>
+
+          <input type="hidden" name="Estimated Price"  id="hidden-price">
+          <input type="hidden" name="Stories" id="hidden-stories">
+          <input type="hidden" name="Linear Feet" id="hidden-feet">
+
         </form>
       </div>
     </section>
@@ -66,13 +69,19 @@
         return;
       }
 
-      const baseRate = 0.95;
+      const baseRate = 0.75;
       const multiplier = stories > 1 ? 1.2 : 1;
       const rawPrice = ft * baseRate * multiplier;
       const finalPrice = rawPrice < 150 ? 150 : rawPrice;
 
       document.getElementById("price-result").innerText = `Estimated Price: $${finalPrice.toFixed(2)}`;
-    }
+
+      // Populate hidden fields
+    document.getElementById("hidden-price").value = `$${finalPrice.toFixed(2)}`;
+    document.getElementById("hidden-stories").value = stories;
+    document.getElementById("hidden-sqft").value = ft;
+  }
+    
   </script>
 </body>
 </html>
