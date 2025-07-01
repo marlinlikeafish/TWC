@@ -62,30 +62,30 @@
     </section>
   </main>
 
-  <script>
-    function calculatePrice() {
-      const sqft = parseFloat(document.getElementById("sqft").value);
-      const stories = parseInt(document.getElementById("stories").value);
-      const style = document.getElementById("style").value;
+  <Script>
+  function calculatePrice() {
+  const sqft = parseFloat(document.getElementById("sqft").value);
+  const stories = parseInt(document.getElementById("stories").value);
+  const style = document.getElementById("style").value;
 
-      if (isNaN(sqft) || isNaN(stories)) {
-        alert("Please enter valid numbers.");
-        return;
-      }
-      
-      const baseRate = 0.1;
-      const multiplier = stories > 1 ? 1.2 : 1;
-      const price = (sqft * baseRate * multiplier).toFixed(2);
-
-      document.getElementById("price-result").innerText = `Estimated Price: $${price}`;
-
-       // Populate hidden fields
-    document.getElementById("hidden-price").value = `$${finalPrice.toFixed(2)}`;
-    document.getElementById("hidden-stories").value = stories;
-    document.getElementById("hidden-sqft").value = sqft;
-    document.getElementById("hidden-style").value = style;
+  if (isNaN(sqft) || isNaN(stories)) {
+    alert("Please enter valid numbers.");
+    return;
   }
 
-  </script>
+  const baseRate = 0.1;
+  const multiplier = stories > 1 ? 1.2 : 1;
+  const finalPrice = sqft * baseRate * multiplier;
+
+  document.getElementById("price-result").innerText = `Estimated Price: $${finalPrice.toFixed(2)}`;
+
+  // Populate hidden fields
+  document.getElementById("hidden-price").value = `$${finalPrice.toFixed(2)}`;
+  document.getElementById("hidden-stories").value = stories;
+  document.getElementById("hidden-sqft").value = sqft;
+  document.getElementById("hidden-style").value = style;
+}
+</Script>
+
 </body>
 </html>
