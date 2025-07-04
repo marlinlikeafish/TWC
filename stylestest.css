@@ -129,9 +129,13 @@ h4{
     font-size: 1.5rem;
 }
 
-.carousel-button :hover,
+.carousel-button :hover{
+    transform: none;
+}
+
 .carousel-button :focus{
     color: white;
+    transform: none;
 }
 
 .carousel-button.prev{
@@ -309,6 +313,10 @@ footer{
         height: 7rem;
     }
 
+    #landing-3 .reviews{
+        height: 100%;
+    }
+    
     .carousel-button{
     position: absolute;
     background: none;
@@ -319,8 +327,24 @@ footer{
     cursor: pointer;
     color: #003366;
     font-size: .5rem;
-    size: 1.5rem;
-}
+    size: 1.5rem;  
+    }
+
+    .carousel-button.prev{
+    right: 0rem;
+    }
+
+    .carousel-button.prev:hover{
+    transform: none;
+    }
+
+    .carousel-button.next :hover{
+    transform: none;
+    }
+
+    .carousel-button.next{
+    left: 0rem;
+    }
     /* Landing Section */
     #landing-1 h1 {
         font-size: 1rem; /* 24px */
