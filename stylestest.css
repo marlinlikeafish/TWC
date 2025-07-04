@@ -76,47 +76,70 @@ h4{
 }
 
 #landing-3{
-    height: 10rem;
+    height: 20rem;
     width: 100%;
     background-color: #E5FAFF;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
 }
 
-#landing-3-text{
+.carousel{
     height: 100%;
+    width: 75%;
+    margin: 0;
+    position: relative;
+}
+
+.carousel > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#landing-3 .reviews{
+    position: absolute;
+    display: inline-flex;
+    inset: 0;
+    opacity: 0;
+    height: 90%;
+}
+
+#landing-3 .reviews > img{
+    display: block;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    height: 100%;
+    object-fit: scale-down;
+    overflow: auto;
 }
 
-#free-window{
-    border: solid;
-    border-radius: .5rem;
-    display: inline-flex;
-    padding: .2rem .2rem;
-    font-weight: 325;
-    background-color: #84D1E6;
-    color: #d3d3d3;
-    border-color: #84D1E6;
-    justify-content: center;
-    align-items: center;
+#landing-3 .reviews[data-active]{
+    opacity: 1;
 }
 
-#free-gutter{
-    display: inline-flex;
-    border: solid;
-    padding: .2rem .2rem;
-    font-weight: 400;
-    background-color: #84D1E6;
-    border-radius: .5rem;
-    color: #000033;
-    border-color: #84D1E6;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
+.carousel-button{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #003366;
+    font-size: 1.5rem;
+}
+
+.carousel-button :hover,
+.carousel-button :focus{
+    color: white;
+}
+
+.carousel-button.prev{
+    right: 1rem;
+}
+
+.carousel-button.next{
+    left: 1rem;
 }
 
 #view-contact{
@@ -285,6 +308,19 @@ footer{
     #landing-3{
         height: 7rem;
     }
+
+    .carousel-button{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-100%);
+    cursor: pointer;
+    color: #003366;
+    font-size: .5rem;
+    size: 1.5rem;
+}
     /* Landing Section */
     #landing-1 h1 {
         font-size: 1rem; /* 24px */

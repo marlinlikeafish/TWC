@@ -76,7 +76,7 @@ h4{
 }
 
 #landing-3{
-    height: 10rem;
+    height: 30rem;
     width: 100%;
     background-color: #E5FAFF;
     justify-content: center;
@@ -84,26 +84,28 @@ h4{
     display: flex;
 }
 
-#landing-3-text{
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+.carousel{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 
-#free-window{
-    border: solid;
-    border-radius: .5rem;
+landing-3 .reviews{
+    position: absolute;
     display: inline-flex;
-    padding: .2rem .2rem;
-    font-weight: 325;
-    background-color: #84D1E6;
-    color: #d3d3d3;
-    border-color: #84D1E6;
-    justify-content: center;
-    align-items: center;
+    inset: 0;
+    opacity: 0;
 }
+
+.reviews > img{
+    display: block;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 
 #free-gutter{
     display: inline-flex;
